@@ -62,7 +62,7 @@ namespace Library_GUI {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Library_GUI;V1.0.0.0;component/secondarywindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Library_GUI;component/secondarywindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\SecondaryWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

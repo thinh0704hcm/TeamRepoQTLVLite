@@ -10,12 +10,15 @@ namespace Library_DTO
     public class Borrow
     {
         [Required]
-        public int BorrowID { get; set; }
+        public int BorrowId { get; set; }
 
         [Required]
         public string Username { get; set; }
 
         [Required]
-        public DateOnly Date { get; set; }
+        public int BorrowBookId { get; set; }
+
+        [Required]
+        public DateTime StartDate { get; set; }
     }
 }

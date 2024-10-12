@@ -20,6 +20,9 @@ namespace Library_DAL
 
         public void Add(User user)
         {
+            if (_context.Users.FirstOrDefault() == null)
+                user.UserId = 1;
+            else user.UserId = _context.Users.OrderByDescending(x => x.UserId).First().UserId + 1; 
             _context.Users.Add(user);
             _context.SaveChanges();
         }
@@ -30,9 +33,9 @@ namespace Library_DAL
             _context.SaveChanges();
         }
 
-        public void Remove(string Username)
+        public void Remove(int UserId)
         {
-            var user = _context.Users.Find(Username);
+            var user = _context.Users.Find(UserId);
             if (user != null)
             {
                 _context.Users.Remove(user);
@@ -40,9 +43,9 @@ namespace Library_DAL
             }
         }
 
-        public User GetByUsername(string Username)
+        public User GetById(int UserId)
         {
-            return _context.Users.Find(Username);
+            return _context.Users.Find(UserId);
         }
 
         public bool CheckExist(User user)

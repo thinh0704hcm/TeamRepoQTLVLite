@@ -72,7 +72,7 @@ namespace Library_GUI {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Library_GUI;V1.0.0.0;component/usercontrols/inputlogin.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Library_GUI;component/usercontrols/inputlogin.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\UserControls\InputLogin.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
